@@ -50,7 +50,7 @@ webSocketServer.on 'request', (request) ->
 				connection.sendUTF "Speeding Up to #{newSpeed}"
 			when "slower"
 				newSpeed = setSpeed(pwmValue * 1.25)
-				connection.sendUTF "Slowing down to #{1/newSpeed}"
+				connection.sendUTF "Slowing down to #{newSpeed}"
 			when "stop"
 				rpio.pwmSetData motorPin, 8192
 				connection.sendUTF "Stopped"
