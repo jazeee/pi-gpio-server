@@ -7,7 +7,8 @@
     "coffeescript": "^99.999.99999",
     "express": "^4.14.0",
     "http": "^0.0.0",
-    "rpio": "^0.9.12"
+    "rpio": "^0.9.12",
+    "websocket": "^1.0.23"
   },
   "devDependencies": {
     "coffee-script": "^1.10.0"
