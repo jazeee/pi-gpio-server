@@ -25,7 +25,7 @@ setSpeed = (newPwmValue) ->
 	console.log "Set speed to #{newSpeed}"
 	newSpeed
 
-app.post "/motor/stop", (req, res) -> 
+app.post "/motor/stop", (req, res) ->
 	setSpeed(8192)
 	res.end "Stopped"
 app.post "/motor/faster", (req, res) ->
@@ -83,4 +83,3 @@ webSocketServer.on 'request', (request) ->
 		if payload == "getState"
 			sendMotorState()
 	stateConnection.on 'connect', sendMotorState
-
